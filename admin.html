@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | Royal Dine</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Royal<span>Dine</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <section class="admin-section">
+    <div class="section-title">
+      <p>Admin Panel</p>
+      <h2>Booking Details</h2>
+    </div>
+
+    <div class="admin-login" id="loginBox">
+      <h3>Admin Login</h3>
+      <input type="text" id="adminUser" placeholder="Username" />
+      <input type="password" id="adminPass" placeholder="Password" />
+      <button class="btn" onclick="adminLogin()">Login</button>
+      <p id="loginMsg"></p>
+      <small>Username: admin | Password: 1234</small>
+    </div>
+
+    <div id="dashboard" class="dashboard hidden">
+      <button class="btn logout" onclick="logout()">Logout</button>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Guests</th>
+              <th>Table</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="bookingList"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
